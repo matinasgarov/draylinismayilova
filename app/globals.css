@@ -46,7 +46,7 @@ a { color: inherit; text-decoration: none; }
 }
 .nav-logo {
   font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: 1.35rem;
   font-style: italic;
   letter-spacing: 0.02em;
   color: var(--dark);
@@ -420,3 +420,37 @@ footer {
   .footer-cols { grid-template-columns: 1fr; }
   .footer-copy { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
+
+/* ── LANGUAGE SWITCHER ───────────────────────────────── */
+.lang-switcher {
+  position: relative;
+  margin-left: 2rem;
+}
+.lang-current {
+  font-size: 0.68rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--mid);
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--rule);
+  transition: color 0.2s, border-color 0.2s;
+}
+.lang-switcher:hover .lang-current {
+  color: var(--dark); border-color: var(--mid);
+}
+.lang-dropdown {
+  display: none;
+  position: absolute; top: calc(100% + 0.5rem); right: 0;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  min-width: 3.5rem;
+  z-index: 300;
+}
+.lang-switcher:hover .lang-dropdown { display: block; }
+.lang-option {
+  display: block;
+  font-size: 0.68rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--mid);
+  padding: 0.5rem 0.75rem;
+  transition: background 0.15s, color 0.15s;
+}
+.lang-option:hover { background: var(--sand); color: var(--dark); }

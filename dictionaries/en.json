@@ -1,0 +1,57 @@
+{
+  "lang": "en",
+  "nav": {
+    "logo": "Dr. Aylin Ismayilova",
+    "about": "About",
+    "experience": "Experience",
+    "research": "Research",
+    "journal": "Journal",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "General Surgeon",
+    "tagline1": "Precision in the operating room.",
+    "tagline2": "Clarity in every consultation.",
+    "tagline3": "Dedication to every patient.",
+    "cta": "Read more",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "sectionNum": "01",
+    "sectionTitle": "About",
+    "pullQuote": "Surgery is not just technique — it is trust,",
+    "pullQuoteAccent": "translated into touch.",
+    "bio1": "Dr. Aylin Ismayilova is a general surgeon committed to advancing the practice of surgery through both technical excellence and compassionate care. With a background in evidence-based medicine and a passion for patient outcomes, she bridges cutting-edge surgical techniques with human-centered medicine.",
+    "bio2": "Her academic work spans minimally invasive procedures, post-operative recovery optimization, and surgical education. She believes that the best surgeons are perpetual students — of medicine, of their patients, and of themselves.",
+    "bio3": "Beyond the operating room, Dr. Ismayilova writes on the intersection of medicine and modern life, making complex clinical realities accessible to wider audiences.",
+    "tags": ["General Surgery", "Laparoscopy", "Emergency Surgery", "Surgical Research", "Medical Writing"]
+  },
+  "experience": {
+    "sectionNum": "02",
+    "sectionTitle": "Experience & Education"
+  },
+  "research": {
+    "sectionNum": "03",
+    "sectionTitle": "Research & Publications"
+  },
+  "journal": {
+    "sectionNum": "04",
+    "sectionTitle": "Journal",
+    "readEssay": "Read essay →"
+  },
+  "footer": {
+    "specialtyTitle": "Specialty",
+    "specialty1": "General Surgery",
+    "specialty2": "Minimally Invasive Procedures",
+    "specialty3": "Emergency Surgery",
+    "contactTitle": "Contact",
+    "locationTitle": "Location",
+    "location1": "Baku, Azerbaijan",
+    "location2": "Available for academic collaborations worldwide",
+    "copyright": "© 2026 Dr. Aylin Ismayilova. All rights reserved.",
+    "tagline": "General Surgeon · Researcher · Writer"
+  },
+  "blog": {
+    "back": "← Back to Journal"
+  }
+}

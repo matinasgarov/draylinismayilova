@@ -1,0 +1,57 @@
+{
+  "lang": "de",
+  "nav": {
+    "logo": "Dr. Aylin Ismayilova",
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "research": "Forschung",
+    "journal": "Journal",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "eyebrow": "Allgemeinchirurgin",
+    "tagline1": "Präzision im Operationssaal.",
+    "tagline2": "Klarheit in jeder Konsultation.",
+    "tagline3": "Hingabe für jeden Patienten.",
+    "cta": "Mehr lesen",
+    "scroll": "Scrollen"
+  },
+  "about": {
+    "sectionNum": "01",
+    "sectionTitle": "Über mich",
+    "pullQuote": "Chirurgie ist nicht nur Technik — sie ist Vertrauen,",
+    "pullQuoteAccent": "übersetzt in Berührung.",
+    "bio1": "Dr. Aylin Ismayilova ist eine Allgemeinchirurgin, die sich der Weiterentwicklung der Chirurgie durch technische Exzellenz und einfühlsame Fürsorge widmet. Mit einem Hintergrund in der evidenzbasierten Medizin und einer Leidenschaft für Patientenergebnisse verbindet sie modernste chirurgische Techniken mit menschenzentrierter Medizin.",
+    "bio2": "Ihre akademische Arbeit umfasst minimalinvasive Verfahren, die Optimierung der postoperativen Erholung und die chirurgische Ausbildung. Sie glaubt, dass die besten Chirurgen ewige Schüler sind — der Medizin, ihrer Patienten und sich selbst gegenüber.",
+    "bio3": "Außerhalb des Operationssaals schreibt Dr. Ismayilova über die Schnittstelle von Medizin und modernem Leben und macht komplexe klinische Realitäten einem breiteren Publikum zugänglich.",
+    "tags": ["Allgemeinchirurgie", "Laparoskopie", "Notfallchirurgie", "Chirurgische Forschung", "Medizinisches Schreiben"]
+  },
+  "experience": {
+    "sectionNum": "02",
+    "sectionTitle": "Erfahrung & Ausbildung"
+  },
+  "research": {
+    "sectionNum": "03",
+    "sectionTitle": "Forschung & Publikationen"
+  },
+  "journal": {
+    "sectionNum": "04",
+    "sectionTitle": "Journal",
+    "readEssay": "Essay lesen →"
+  },
+  "footer": {
+    "specialtyTitle": "Fachgebiet",
+    "specialty1": "Allgemeinchirurgie",
+    "specialty2": "Minimalinvasive Verfahren",
+    "specialty3": "Notfallchirurgie",
+    "contactTitle": "Kontakt",
+    "locationTitle": "Standort",
+    "location1": "Baku, Aserbaidschan",
+    "location2": "Offen für akademische Kooperationen weltweit",
+    "copyright": "© 2026 Dr. Aylin Ismayilova. Alle Rechte vorbehalten.",
+    "tagline": "Allgemeinchirurgin · Forscherin · Autorin"
+  },
+  "blog": {
+    "back": "← Zurück zum Journal"
+  }
+}

@@ -1,4 +1,5 @@
 import experienceData from '@/content/experience.json'
+import type { Dictionary } from '@/app/[lang]/dictionaries'
 
 interface ExperienceEntry {
   years: string
@@ -7,14 +8,14 @@ interface ExperienceEntry {
   description: string
 }
 
-export default function Experience() {
+export default function Experience({ dict }: { dict: Dictionary }) {
   const entries = experienceData as ExperienceEntry[]
 
   return (
     <section className="sec" id="experience">
       <div className="sec-head">
-        <span className="sec-num">02</span>
-        <h2 className="sec-title">Experience &amp; Education</h2>
+        <span className="sec-num">{dict.experience.sectionNum}</span>
+        <h2 className="sec-title">{dict.experience.sectionTitle}</h2>
       </div>
       {entries.map((entry, i) => (
         <div key={i} className="timeline-item reveal">

@@ -1,26 +1,28 @@
-export default function Hero() {
+import type { Dictionary } from '@/app/[lang]/dictionaries'
+
+export default function Hero({ dict }: { dict: Dictionary }) {
   return (
     <section className="hero" id="home">
       <div className="hero-left">
-        <div className="hero-eyebrow">General Surgeon</div>
+        <div className="hero-eyebrow">{dict.hero.eyebrow}</div>
         <h1 className="hero-name">
           <em>Aylin</em>
           <span className="last">Ismayilova</span>
         </h1>
         <p className="hero-tagline">
-          Precision in the operating room.
+          {dict.hero.tagline1}
           <br />
-          Clarity in every consultation.
+          {dict.hero.tagline2}
           <br />
-          Dedication to every patient.
+          {dict.hero.tagline3}
         </p>
         <div className="hero-cta-row">
           <a href="#about" className="btn-outline">
-            Read more →
+            {dict.hero.cta} →
           </a>
           <div className="scroll-hint">
             <div className="bar" />
-            <span>Scroll</span>
+            <span>{dict.hero.scroll}</span>
           </div>
         </div>
       </div>

@@ -1,8 +1,14 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import type { Dictionary } from '@/app/[lang]/dictionaries'
 
-export default function Nav() {
+interface NavProps {
+  dict: Dictionary
+  lang: string
+}
+
+export default function Nav({ dict, lang }: NavProps) {
   const navRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -13,18 +19,30 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
+  const otherLangs = ['en', 'az', 'de'].filter((l) => l !== lang)
+
   return (
     <nav id="nav" ref={navRef}>
-      <a href="#home" className="nav-logo">
-        Dr. Aylin Ismayilova
+      <a href={`/${lang}/#home`} className="nav-logo">
+        {dict.nav.logo}
       </a>
       <ul className="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#blog">Journal</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href={`/${lang}/#about`}>{dict.nav.about}</a></li>
+        <li><a href={`/${lang}/#experience`}>{dict.nav.experience}</a></li>
+        <li><a href={`/${lang}/#research`}>{dict.nav.research}</a></li>
+        <li><a href={`/${lang}/#blog`}>{dict.nav.journal}</a></li>
+        <li><a href={`/${lang}/#contact`}>{dict.nav.contact}</a></li>
       </ul>
+      <div className="lang-switcher">
+        <span className="lang-current">{lang.toUpperCase()}</span>
+        <div className="lang-dropdown">
+          {otherLangs.map((l) => (
+            <a key={l} href={`/${l}/`} className="lang-option">
+              {l.toUpperCase()}
+            </a>
+          ))}
+        </div>
+      </div>
     </nav>
   )
 }
