@@ -13,3 +13,16 @@
   to = "/en"
   status = 302
   force = true
+
+# Cache static images aggressively so repeat visits are instant.
+# (7 days — long enough to be fast, short enough that replacing an image
+# by the same filename still propagates within a week.)
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/uploads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

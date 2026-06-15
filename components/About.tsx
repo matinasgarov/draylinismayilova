@@ -35,10 +35,10 @@ export default function About({ dict }: { dict: Dictionary }) {
       </div>
       <div className="about-photos reveal">
         <div className="about-photo-wrap">
-          <img src="/images/about-1.jpg" alt="Dr. Aylin Ismayilova with colleagues" />
+          <img src="/images/about-1.jpg" alt="Dr. Aylin Ismayilova with colleagues" loading="lazy" decoding="async" width="1400" height="933" />
         </div>
         <div className="about-photo-wrap">
-          <img src="/images/about-2.jpg" alt="Dr. Aylin Ismayilova at the hospital" />
+          <img src="/images/about-2.jpg" alt="Dr. Aylin Ismayilova at the hospital" loading="lazy" decoding="async" width="1400" height="933" />
         </div>
       </div>
     </section>

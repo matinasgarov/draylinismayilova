@@ -67,6 +67,10 @@ export default function Hero({ dict }: { dict: Dictionary }) {
         <img
           src="/uploads/photo-1781454037417.jpeg"
           alt="Dr. Aylin Ismayilova, medical doctor"
+          fetchPriority="high"
+          decoding="async"
+          width="1600"
+          height="1066"
         />
       </div>
     </section>
