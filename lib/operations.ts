@@ -4,34 +4,37 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
-const postsDir = path.join(process.cwd(), 'content/posts')
+const opsDir = path.join(process.cwd(), 'content/operations')
 
-export interface PostMeta {
+export interface OperationMeta {
   slug: string
   title: string
   date: string
-  category: string
+  type: string
+  technique: string
+  duration: string
+  outcome: string
   excerpt: string
 }
 
-export interface Post extends PostMeta {
+export interface Operation extends OperationMeta {
   contentHtml: string
 }
 
 function fileFor(slug: string, lang: string): string {
-  const localized = path.join(postsDir, `${slug}.${lang}.md`)
+  const localized = path.join(opsDir, `${slug}.${lang}.md`)
   if (fs.existsSync(localized)) return localized
-  return path.join(postsDir, `${slug}.en.md`)
+  return path.join(opsDir, `${slug}.en.md`)
 }
 
 function slugs(): string[] {
   return fs
-    .readdirSync(postsDir)
+    .readdirSync(opsDir)
     .filter((f) => f.endsWith('.en.md'))
     .map((f) => f.replace(/\.en\.md$/, ''))
 }
 
-export function getPosts(lang = 'en'): PostMeta[] {
+export function getOperations(lang = 'en'): OperationMeta[] {
   return slugs()
     .map((slug) => {
       const raw = fs.readFileSync(fileFor(slug, lang), 'utf8')
@@ -40,14 +43,17 @@ export function getPosts(lang = 'en'): PostMeta[] {
         slug,
         title: data.title as string,
         date: data.date as string,
-        category: data.category as string,
+        type: data.type as string,
+        technique: data.technique as string,
+        duration: data.duration as string,
+        outcome: data.outcome as string,
         excerpt: data.excerpt as string,
       }
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
-export async function getPost(slug: string, lang = 'en'): Promise<Post> {
+export async function getOperation(slug: string, lang = 'en'): Promise<Operation> {
   const raw = fs.readFileSync(fileFor(slug, lang), 'utf8')
   const { data, content } = matter(raw)
   const processed = await remark().use(html).process(content)
@@ -55,7 +61,10 @@ export async function getPost(slug: string, lang = 'en'): Promise<Post> {
     slug,
     title: data.title as string,
     date: data.date as string,
-    category: data.category as string,
+    type: data.type as string,
+    technique: data.technique as string,
+    duration: data.duration as string,
+    outcome: data.outcome as string,
     excerpt: data.excerpt as string,
     contentHtml: processed.toString(),
   }

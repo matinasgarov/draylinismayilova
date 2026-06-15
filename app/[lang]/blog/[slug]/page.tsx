@@ -1,7 +1,9 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import { getPost, getPosts } from '@/lib/posts'
 import { getDictionary, hasLocale, locales } from '../../dictionaries'
+import { buildAlternates, OG_LOCALE } from '@/lib/site'
 
 export async function generateStaticParams() {
   const posts = getPosts()
@@ -12,6 +14,31 @@ export async function generateStaticParams() {
     }
   }
   return params
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>
+}): Promise<Metadata> {
+  const { lang, slug } = await params
+  const locale = hasLocale(lang) ? lang : 'en'
+  const post = await getPost(slug, locale)
+  const path = `/blog/${slug}`
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: buildAlternates(path, locale),
+    openGraph: {
+      type: 'article',
+      locale: OG_LOCALE[locale],
+      url: `/${locale}${path}`,
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+    },
+  }
 }
 
 function formatDate(dateStr: string, lang: string): string {
@@ -32,7 +59,7 @@ export default async function BlogPost({
   if (!hasLocale(lang)) notFound()
 
   const dict = await getDictionary(lang)
-  const post = await getPost(slug)
+  const post = await getPost(slug, lang)
 
   return (
     <>

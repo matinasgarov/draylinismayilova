@@ -2,7 +2,7 @@ import type { Dictionary } from '@/app/[lang]/dictionaries'
 
 export default function Footer({ dict }: { dict: Dictionary }) {
   return (
-    <footer id="contact">
+    <footer>
       <div className="footer-name">
         <em>Aylin</em>
         <br />

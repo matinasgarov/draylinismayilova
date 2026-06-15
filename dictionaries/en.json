@@ -6,12 +6,13 @@
     "experience": "Experience",
     "research": "Research",
     "journal": "Journal",
+    "operations": "Operations",
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "General Surgeon",
-    "tagline1": "Precision in the operating room.",
-    "tagline2": "Clarity in every consultation.",
+   
+    "tagline1": "Studying medicine with purpose.",
+    "tagline2": "Clinical curiosity, grounded in research.",
     "tagline3": "Dedication to every patient.",
     "cta": "Read more",
     "scroll": "Scroll"
@@ -21,10 +22,12 @@
     "sectionTitle": "About",
     "pullQuote": "Surgery is not just technique — it is trust,",
     "pullQuoteAccent": "translated into touch.",
-    "bio1": "Dr. Aylin Ismayilova is a general surgeon committed to advancing the practice of surgery through both technical excellence and compassionate care. With a background in evidence-based medicine and a passion for patient outcomes, she bridges cutting-edge surgical techniques with human-centered medicine.",
-    "bio2": "Her academic work spans minimally invasive procedures, post-operative recovery optimization, and surgical education. She believes that the best surgeons are perpetual students — of medicine, of their patients, and of themselves.",
-    "bio3": "Beyond the operating room, Dr. Ismayilova writes on the intersection of medicine and modern life, making complex clinical realities accessible to wider audiences.",
-    "tags": ["General Surgery", "Laparoscopy", "Emergency Surgery", "Surgical Research", "Medical Writing"]
+    "bio1": "Dr. Aylin Ismayilova is a physician who graduated from the University of Health Sciences (Sağlık Bilimleri Üniversitesi) in Türkiye, where she was admitted in 2020. Born on 4 February 2001, she pursues a career in medicine with a particular interest in surgery.",
+    "bio2": "Before university she completed her secondary education at Dəyanət Türk Liseyi, graduating with an approximate 90/100 grade-point average — an early record of the discipline and curiosity she now brings to her clinical studies.",
+    "bio3": "Alongside her studies she has contributed to clinical research, co-authoring a survey on awareness of Sudden Unexpected Death in Epilepsy (SUDEP) among medical students in Turkey, and she writes about the human side of medicine.",
+    "tags": ["Medicine", "Surgery", "Clinical Research", "Epilepsy & SUDEP", "Medical Writing"],
+    "downloadCv": "Download CV",
+    "downloadDiploma": "Download Diploma"
   },
   "experience": {
     "sectionNum": "02",
@@ -32,7 +35,8 @@
   },
   "research": {
     "sectionNum": "03",
-    "sectionTitle": "Research & Publications"
+    "sectionTitle": "Research & Publications",
+    "readPaper": "Read paper →"
   },
   "journal": {
     "sectionNum": "04",
@@ -40,16 +44,42 @@
     "readEssay": "Read essay →"
   },
   "footer": {
-    "specialtyTitle": "Specialty",
-    "specialty1": "General Surgery",
-    "specialty2": "Minimally Invasive Procedures",
-    "specialty3": "Emergency Surgery",
+    "specialtyTitle": "Focus",
+    "specialty1": "Medicine & Surgery",
+    "specialty2": "Clinical Research",
+    "specialty3": "Epilepsy & SUDEP Awareness",
     "contactTitle": "Contact",
     "locationTitle": "Location",
     "location1": "Baku, Azerbaijan",
     "location2": "Available for academic collaborations worldwide",
     "copyright": "© 2026 Dr. Aylin Ismayilova. All rights reserved.",
-    "tagline": "General Surgeon · Researcher · Writer"
+    "tagline": "Medical Doctor · Researcher · Writer"
+  },
+  "stats": {
+    "operationsLabel": "Operations",
+    "patientsLabel": "Patients Healed",
+    "gradeLabel": "Grade Average"
+  },
+  "operations": {
+    "sectionNum": "05",
+    "sectionTitle": "Recent Operations",
+    "typeLabel": "Type",
+    "techniqueLabel": "Technique",
+    "durationLabel": "Duration",
+    "outcomeLabel": "Outcome",
+    "readMore": "Read report →",
+    "back": "← Back to Operations"
+  },
+  "contact": {
+    "sectionNum": "06",
+    "sectionTitle": "Get in Touch",
+    "subtitle": "Whether you have a clinical question, a research collaboration in mind, or simply want to connect — I would love to hear from you.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Your message",
+    "send": "Send message →",
+    "thanks": "Thank you — I will be in touch soon.",
+    "error": "Something went wrong. Please try again or email directly."
   },
   "blog": {
     "back": "← Back to Journal"

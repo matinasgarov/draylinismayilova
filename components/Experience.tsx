@@ -1,15 +1,18 @@
 import experienceData from '@/content/experience.json'
-import type { Dictionary } from '@/app/[lang]/dictionaries'
+import type { Dictionary, Locale } from '@/app/[lang]/dictionaries'
 
 interface ExperienceEntry {
-  years: string
-  role: string
-  place: string
-  description: string
+  years: Record<string, string>
+  role: Record<string, string>
+  place: Record<string, string>
+  description: Record<string, string>
+  logo?: string
 }
 
 export default function Experience({ dict }: { dict: Dictionary }) {
+  const lang = dict.lang as Locale
   const entries = experienceData as ExperienceEntry[]
+  const pick = (field: Record<string, string>) => field[lang] ?? field.en
 
   return (
     <section className="sec" id="experience">
@@ -20,12 +23,17 @@ export default function Experience({ dict }: { dict: Dictionary }) {
       {entries.map((entry, i) => (
         <div key={i} className="timeline-item reveal">
           <div className="t-year" style={{ whiteSpace: 'pre-line' }}>
-            {entry.years}
+            {pick(entry.years)}
           </div>
           <div className="t-body">
-            <h3>{entry.role}</h3>
-            <div className="t-place">{entry.place}</div>
-            <p>{entry.description}</p>
+            <div className="t-head">
+              <div>
+                <h3>{pick(entry.role)}</h3>
+                <div className="t-place">{pick(entry.place)}</div>
+              </div>
+              {entry.logo && <img src={entry.logo} alt="" className="t-logo" />}
+            </div>
+            <p>{pick(entry.description)}</p>
           </div>
         </div>
       ))}

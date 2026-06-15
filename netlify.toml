@@ -1,3 +1,15 @@
 [build]
   command = "npm run build"
   publish = "out"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# The site has no root page — only /en, /az, /de. Send the bare domain to
+# the default locale. force = true so it overrides the generated index.html.
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+  force = true

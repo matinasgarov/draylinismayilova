@@ -23,6 +23,22 @@ export default function About({ dict }: { dict: Dictionary }) {
               <span key={tag} className="tag">{tag}</span>
             ))}
           </div>
+          <div className="about-docs">
+            <a href="/cv.pdf" download className="btn-outline cv-btn">
+              {(dict.about as { downloadCv: string }).downloadCv} ↓
+            </a>
+            <a href="/diploma.pdf" download className="btn-outline cv-btn">
+              {(dict.about as { downloadDiploma: string }).downloadDiploma} ↓
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="about-photos reveal">
+        <div className="about-photo-wrap">
+          <img src="/images/about-1.jpg" alt="Dr. Aylin Ismayilova with colleagues" />
+        </div>
+        <div className="about-photo-wrap">
+          <img src="/images/about-2.jpg" alt="Dr. Aylin Ismayilova at the hospital" />
         </div>
       </div>
     </section>

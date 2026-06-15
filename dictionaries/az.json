@@ -6,25 +6,28 @@
     "experience": "Təcrübə",
     "research": "Tədqiqat",
     "journal": "Jurnal",
+    "operations": "Əməliyyatlar",
     "contact": "Əlaqə"
   },
   "hero": {
-    "eyebrow": "Ümumi Cərrah",
-    "tagline1": "Əməliyyat otağında dəqiqlik.",
-    "tagline2": "Hər konsultasiyada aydınlıq.",
-    "tagline3": "Hər xəstəyə sədaqət.",
+    "eyebrow": "Həkim",
+    "tagline1": "Məqsədyönlü tibb təhsili.",
+    "tagline2": "Tədqiqata əsaslanan klinik maraq.",
+    "tagline3": "Hər xəstəyə sədaqətlə xidmət.",
     "cta": "Daha çox",
     "scroll": "Sürüşdür"
   },
   "about": {
     "sectionNum": "01",
     "sectionTitle": "Haqqında",
-    "pullQuote": "Cərrahlıq yalnız texnika deyil — bu, etimaddır,",
-    "pullQuoteAccent": "toxunuşa çevrilmiş.",
-    "bio1": "Dr. Aylin İsmayılova həm texniki mükəmməllik, həm də şəfqətli qayğı vasitəsilə cərrahlıq praktikasını inkişaf etdirməyə sadiq ümumi bir cərrahdır. Sübutlara əsaslanan tibb sahəsindəki təcrübəsi və xəstə nəticələrinə olan həvəsi ilə o, müasir cərrahi texnikaları insana yönümlü tibb ilə birləşdirir.",
-    "bio2": "Onun akademik işi minimal invaziv prosedurları, əməliyyatdan sonrakı sağalmanın optimallaşdırılmasını və cərrahi təhsili əhatə edir. O inanır ki, ən yaxşı cərrahlar həmişə tələbədir — tibb, xəstələri və özləri barədə.",
-    "bio3": "Əməliyyat otağından kənarda Dr. İsmayılova tibb və müasir həyatın kəsişməsi haqqında yazır, mürəkkəb klinik reallıqları geniş auditoriyaya çatdırır.",
-    "tags": ["Ümumi Cərrahlıq", "Laparoskopiya", "Təcili Cərrahlıq", "Cərrahi Tədqiqat", "Tibbi Yazı"]
+    "pullQuote": "Cərrahlıq sadəcə texniki iş deyil, etibarın,",
+    "pullQuoteAccent": "toxunuşa çevrilmiş halıdır.",
+    "bio1": "Dr. Aylin İsmayılova Türkiyədəki Sağlık Bilimleri Üniversitesi-ni bitirmiş həkimdir; ali məktəbə 2020-ci ildə qəbul olunub. 4 fevral 2001-ci ildə doğulub və xüsusilə cərrahlığa marağı olmaqla tibb sahəsində fəaliyyət göstərir.",
+    "bio2": "Universitetdən əvvəl Dəyanət Türk Liseyini təxminən 90/100 ortalama balla bitirib — bu, indi klinik təhsilinə gətirdiyi intizam və marağın erkən göstəricisidir.",
+    "bio3": "Təhsili ilə yanaşı, klinik tədqiqata töhfə verib: Türkiyədə tibb tələbələri arasında Epilepsiyada Gözlənilməz Qəfil Ölüm (SUDEP) barədə məlumatlılığa dair sorğunun həmmüəllifidir və tibbin insani tərəfi haqqında yazır.",
+    "tags": ["Tibb", "Cərrahlıq", "Klinik Tədqiqat", "Epilepsiya & SUDEP", "Tibbi Yazı"],
+    "downloadCv": "CV Yüklə",
+    "downloadDiploma": "Diplomu Yüklə"
   },
   "experience": {
     "sectionNum": "02",
@@ -32,7 +35,8 @@
   },
   "research": {
     "sectionNum": "03",
-    "sectionTitle": "Tədqiqat & Nəşrlər"
+    "sectionTitle": "Tədqiqat & Nəşrlər",
+    "readPaper": "Məqaləni oxu →"
   },
   "journal": {
     "sectionNum": "04",
@@ -40,16 +44,42 @@
     "readEssay": "Esseni oxu →"
   },
   "footer": {
-    "specialtyTitle": "İxtisas",
-    "specialty1": "Ümumi Cərrahlıq",
-    "specialty2": "Minimal İnvaziv Prosedurlar",
-    "specialty3": "Təcili Cərrahlıq",
+    "specialtyTitle": "Fokus",
+    "specialty1": "Tibb & Cərrahlıq",
+    "specialty2": "Klinik Tədqiqat",
+    "specialty3": "Epilepsiya & SUDEP Maarifləndirməsi",
     "contactTitle": "Əlaqə",
     "locationTitle": "Yer",
     "location1": "Bakı, Azərbaycan",
     "location2": "Dünya üzrə akademik əməkdaşlıqlara açıqdır",
     "copyright": "© 2026 Dr. Aylin İsmayılova. Bütün hüquqlar qorunur.",
-    "tagline": "Ümumi Cərrah · Tədqiqatçı · Yazıçı"
+    "tagline": "Həkim · Tədqiqatçı · Yazıçı"
+  },
+  "stats": {
+    "operationsLabel": "Əməliyyatlar",
+    "patientsLabel": "Sağalan Xəstələr",
+    "gradeLabel": "Ortalama Bal"
+  },
+  "contact": {
+    "sectionNum": "05",
+    "sectionTitle": "Əlaqə",
+    "subtitle": "Klinik sualınız, tədqiqat əməkdaşlığı təklifiniz və ya sadəcə əlaqə saxlamaq istəyiniz varsa — sizdən eşitmək istərdim.",
+    "namePlaceholder": "Adınız",
+    "emailPlaceholder": "E-poçtunuz",
+    "messagePlaceholder": "Mesajınız",
+    "send": "Göndər →",
+    "thanks": "Təşəkkür edirəm — tezliklə əlaqə saxlayacağam.",
+    "error": "Xəta baş verdi. Yenidən cəhd edin və ya birbaşa e-poçt yazın."
+  },
+  "operations": {
+    "sectionNum": "05",
+    "sectionTitle": "Son Əməliyyatlar",
+    "typeLabel": "Növ",
+    "techniqueLabel": "Texnika",
+    "durationLabel": "Müddət",
+    "outcomeLabel": "Nəticə",
+    "readMore": "Hesabatı oxu →",
+    "back": "← Əməliyyatlara qayıt"
   },
   "blog": {
     "back": "← Jurnala qayıt"

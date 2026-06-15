@@ -6,12 +6,13 @@
     "experience": "Erfahrung",
     "research": "Forschung",
     "journal": "Journal",
+    "operations": "Operationen",
     "contact": "Kontakt"
   },
   "hero": {
-    "eyebrow": "Allgemeinchirurgin",
-    "tagline1": "Präzision im Operationssaal.",
-    "tagline2": "Klarheit in jeder Konsultation.",
+    "eyebrow": "Ärztin",
+    "tagline1": "Medizinstudium mit Zielstrebigkeit.",
+    "tagline2": "Klinische Neugier, gestützt auf Forschung.",
     "tagline3": "Hingabe für jeden Patienten.",
     "cta": "Mehr lesen",
     "scroll": "Scrollen"
@@ -21,10 +22,12 @@
     "sectionTitle": "Über mich",
     "pullQuote": "Chirurgie ist nicht nur Technik — sie ist Vertrauen,",
     "pullQuoteAccent": "übersetzt in Berührung.",
-    "bio1": "Dr. Aylin Ismayilova ist eine Allgemeinchirurgin, die sich der Weiterentwicklung der Chirurgie durch technische Exzellenz und einfühlsame Fürsorge widmet. Mit einem Hintergrund in der evidenzbasierten Medizin und einer Leidenschaft für Patientenergebnisse verbindet sie modernste chirurgische Techniken mit menschenzentrierter Medizin.",
-    "bio2": "Ihre akademische Arbeit umfasst minimalinvasive Verfahren, die Optimierung der postoperativen Erholung und die chirurgische Ausbildung. Sie glaubt, dass die besten Chirurgen ewige Schüler sind — der Medizin, ihrer Patienten und sich selbst gegenüber.",
-    "bio3": "Außerhalb des Operationssaals schreibt Dr. Ismayilova über die Schnittstelle von Medizin und modernem Leben und macht komplexe klinische Realitäten einem breiteren Publikum zugänglich.",
-    "tags": ["Allgemeinchirurgie", "Laparoskopie", "Notfallchirurgie", "Chirurgische Forschung", "Medizinisches Schreiben"]
+    "bio1": "Dr. Aylin Ismayilova ist Ärztin und Absolventin der Universität für Gesundheitswissenschaften (Sağlık Bilimleri Üniversitesi) in der Türkei, wo sie 2020 zugelassen wurde. Geboren am 4. Februar 2001, verfolgt sie eine Laufbahn in der Medizin mit besonderem Interesse an der Chirurgie.",
+    "bio2": "Vor dem Studium schloss sie ihre Sekundarschulbildung am Dəyanət Türk Liseyi mit einem Notendurchschnitt von etwa 90/100 ab — ein frühes Zeugnis der Disziplin und Neugier, die sie nun in ihr klinisches Studium einbringt.",
+    "bio3": "Neben ihrem Studium hat sie zur klinischen Forschung beigetragen — als Mitautorin einer Umfrage zum Bewusstsein für den plötzlichen unerwarteten Tod bei Epilepsie (SUDEP) unter Medizinstudierenden in der Türkei — und schreibt über die menschliche Seite der Medizin.",
+    "tags": ["Medizin", "Chirurgie", "Klinische Forschung", "Epilepsie & SUDEP", "Medizinisches Schreiben"],
+    "downloadCv": "Lebenslauf herunterladen",
+    "downloadDiploma": "Diplom herunterladen"
   },
   "experience": {
     "sectionNum": "02",
@@ -32,7 +35,8 @@
   },
   "research": {
     "sectionNum": "03",
-    "sectionTitle": "Forschung & Publikationen"
+    "sectionTitle": "Forschung & Publikationen",
+    "readPaper": "Studie lesen →"
   },
   "journal": {
     "sectionNum": "04",
@@ -40,16 +44,42 @@
     "readEssay": "Essay lesen →"
   },
   "footer": {
-    "specialtyTitle": "Fachgebiet",
-    "specialty1": "Allgemeinchirurgie",
-    "specialty2": "Minimalinvasive Verfahren",
-    "specialty3": "Notfallchirurgie",
+    "specialtyTitle": "Schwerpunkt",
+    "specialty1": "Medizin & Chirurgie",
+    "specialty2": "Klinische Forschung",
+    "specialty3": "Epilepsie- & SUDEP-Aufklärung",
     "contactTitle": "Kontakt",
     "locationTitle": "Standort",
     "location1": "Baku, Aserbaidschan",
     "location2": "Offen für akademische Kooperationen weltweit",
     "copyright": "© 2026 Dr. Aylin Ismayilova. Alle Rechte vorbehalten.",
-    "tagline": "Allgemeinchirurgin · Forscherin · Autorin"
+    "tagline": "Ärztin · Forscherin · Autorin"
+  },
+  "stats": {
+    "operationsLabel": "Operationen",
+    "patientsLabel": "Geheilte Patienten",
+    "gradeLabel": "Notendurchschnitt"
+  },
+  "contact": {
+    "sectionNum": "05",
+    "sectionTitle": "Kontakt",
+    "subtitle": "Ob Sie eine klinische Frage haben, eine Forschungskooperation anstreben oder einfach in Kontakt treten möchten — ich freue mich von Ihnen zu hören.",
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "Ihre E-Mail",
+    "messagePlaceholder": "Ihre Nachricht",
+    "send": "Nachricht senden →",
+    "thanks": "Vielen Dank — ich melde mich bald bei Ihnen.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie direkt eine E-Mail."
+  },
+  "operations": {
+    "sectionNum": "05",
+    "sectionTitle": "Aktuelle Operationen",
+    "typeLabel": "Typ",
+    "techniqueLabel": "Technik",
+    "durationLabel": "Dauer",
+    "outcomeLabel": "Ergebnis",
+    "readMore": "Bericht lesen →",
+    "back": "← Zurück zu Operationen"
   },
   "blog": {
     "back": "← Zurück zum Journal"

@@ -1,13 +1,17 @@
 import publicationsData from '@/content/publications.json'
-import type { Dictionary } from '@/app/[lang]/dictionaries'
+import type { Dictionary, Locale } from '@/app/[lang]/dictionaries'
 
 interface Publication {
   year: string
-  title: string
-  journal: string
+  title: Record<string, string>
+  authors?: Record<string, string>
+  journal: Record<string, string>
+  doi?: string
+  summary?: Record<string, string>
+  url?: string
 }
 
-export default function Research({ dict }: { dict: Dictionary }) {
+export default function Research({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   const publications = publicationsData as Publication[]
 
   return (
@@ -16,16 +20,38 @@ export default function Research({ dict }: { dict: Dictionary }) {
         <span className="sec-num">{dict.research.sectionNum}</span>
         <h2 className="sec-title">{dict.research.sectionTitle}</h2>
       </div>
-      {publications.map((pub, i) => (
-        <div key={i} className="pub-item reveal">
-          <div className="p-year">{pub.year}</div>
-          <div className="p-body">
-            <h3>{pub.title}</h3>
-            <div className="p-journal">{pub.journal}</div>
-          </div>
-          <div className="pub-arr">→</div>
-        </div>
-      ))}
+      {publications.map((pub, i) => {
+        const title = pub.title[lang] ?? pub.title.en
+        const journal = pub.journal[lang] ?? pub.journal.en
+        const authors = pub.authors?.[lang] ?? pub.authors?.en
+        const summary = pub.summary?.[lang] ?? pub.summary?.en
+        const Wrapper = pub.url ? 'a' : 'div'
+        const wrapperProps = pub.url
+          ? {
+              href: pub.url,
+              target: '_blank',
+              rel: 'noopener noreferrer',
+              style: { textDecoration: 'none', color: 'inherit' },
+            }
+          : {}
+
+        return (
+          <Wrapper key={i} className="pub-item reveal" {...wrapperProps}>
+            <div className="p-year">{pub.year}</div>
+            <div className="p-body">
+              <h3>{title}</h3>
+              {authors && <div className="p-authors">{authors}</div>}
+              <div className="p-journal">
+                {journal}
+                {pub.doi && <span className="p-doi"> · doi:{pub.doi}</span>}
+              </div>
+              {summary && <p className="p-summary">{summary}</p>}
+              {pub.url && <span className="p-link">{dict.research.readPaper}</span>}
+            </div>
+            <div className="pub-arr">→</div>
+          </Wrapper>
+        )
+      })}
     </section>
   )
 }

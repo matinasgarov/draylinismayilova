@@ -1,11 +1,41 @@
 import type { Metadata } from 'next'
 import '../globals.css'
 import { locales, hasLocale, type Locale } from './dictionaries'
+import { SITE_URL, GOOGLE_SITE_VERIFICATION } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Dr. Aylin Ismayilova — General Surgeon',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Dr. Aylin Ismayilova — Medical Doctor',
+    template: '%s · Dr. Aylin Ismayilova',
+  },
   description:
-    'Personal website and blog of Dr. Aylin Ismayilova, General Surgeon based in Baku, Azerbaijan.',
+    'Personal website and blog of Dr. Aylin Ismayilova, a medical doctor who graduated from the University of Health Sciences (Sağlık Bilimleri Üniversitesi), Türkiye.',
+  applicationName: 'Dr. Aylin Ismayilova',
+  authors: [{ name: 'Dr. Aylin Ismayilova' }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+  },
+  openGraph: {
+    type: 'website',
+    siteName: 'Dr. Aylin Ismayilova',
+    title: 'Dr. Aylin Ismayilova — Medical Doctor',
+    description:
+      'Physician, researcher and writer — clinical curiosity grounded in research.',
+    images: [{ url: '/uploads/photo-1781454037417.jpeg', width: 1200, height: 1200, alt: 'Dr. Aylin Ismayilova' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dr. Aylin Ismayilova — Medical Doctor',
+    description:
+      'Physician, researcher and writer — clinical curiosity grounded in research.',
+    images: ['/uploads/photo-1781454037417.jpeg'],
+  },
+  ...(GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: GOOGLE_SITE_VERIFICATION } }
+    : {}),
 }
 
 export async function generateStaticParams() {

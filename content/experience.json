@@ -1,26 +1,69 @@
 [
   {
-    "years": "2024 –\nPresent",
-    "role": "Surgical Resident, General Surgery",
-    "place": "Department of Surgery · University Hospital",
-    "description": "Full-spectrum clinical training encompassing laparoscopic and open procedures, emergency surgery, and complex abdominal cases. Active participation in multidisciplinary tumor boards and surgical rounds."
+    "years": {
+      "en": "2020 –\n2026",
+      "az": "2020 –\n2026",
+      "de": "2020 –\n2026"
+    },
+    "logo": "/images/uni.png",
+    "role": {
+      "en": "Doctor of Medicine (MD)",
+      "az": "Tibb Doktoru (MD)",
+      "de": "Doktor der Medizin (MD)"
+    },
+    "place": {
+      "en": "University of Health Sciences (Sağlık Bilimleri Üniversitesi) · Türkiye",
+      "az": "Sağlık Bilimleri Üniversitesi · Türkiyə",
+      "de": "Universität für Gesundheitswissenschaften (Sağlık Bilimleri Üniversitesi) · Türkei"
+    },
+    "description": {
+      "en": "Admitted to the medical programme in 2020 and graduated in 2026. Full undergraduate medical education spanning the basic and clinical sciences, alongside hospital clerkships and patient-facing training.",
+      "az": "2020-ci ildə tibb proqramına qəbul olunub və 2026-cı ildə bitirib. Əsas və klinik elmləri əhatə edən tam bakalavr tibb təhsili, eyni zamanda xəstəxana təcrübəsi və xəstələrlə işləmə təlimi.",
+      "de": "2020 zum Medizinstudium zugelassen und 2026 abgeschlossen. Vollständige grundständige medizinische Ausbildung über die vorklinischen und klinischen Fächer, ergänzt durch klinische Praktika und patientennahe Ausbildung."
+    }
   },
   {
-    "years": "2018 –\n2024",
-    "role": "Doctor of Medicine (MD)",
-    "place": "Azerbaijani Medical University, Baku",
-    "description": "Comprehensive medical education with honors distinction. Final-year thesis on minimally invasive surgical outcomes in emergency abdominal presentations."
+    "years": {
+      "en": "2023",
+      "az": "2023",
+      "de": "2023"
+    },
+    "role": {
+      "en": "Research Co-author",
+      "az": "Tədqiqat Həmmüəllifi",
+      "de": "Forschungs-Mitautorin"
+    },
+    "place": {
+      "en": "medRxiv (preprint)",
+      "az": "medRxiv (çap öncəsi)",
+      "de": "medRxiv (Preprint)"
+    },
+    "description": {
+      "en": "Co-authored a survey study on awareness of Sudden Unexpected Death in Epilepsy (SUDEP) among medical students in Turkey, released as a medRxiv preprint.",
+      "az": "Türkiyədə tibb tələbələri arasında Epilepsiyada Gözlənilməz Qəfil Ölüm (SUDEP) barədə məlumatlılığa dair sorğu tədqiqatının həmmüəllifi; medRxiv-də çap öncəsi nəşr olunub.",
+      "de": "Mitautorin einer Umfragestudie zum Bewusstsein für den plötzlichen unerwarteten Tod bei Epilepsie (SUDEP) unter Medizinstudierenden in der Türkei, veröffentlicht als medRxiv-Preprint."
+    }
   },
   {
-    "years": "2023",
-    "role": "Clinical Externship — Laparoscopic Surgery",
-    "place": "Advanced Surgical Training Centre",
-    "description": "Intensive hands-on training in advanced laparoscopic techniques. Completed over 200 supervised procedures across cholecystectomy, appendectomy, and hernia repair."
-  },
-  {
-    "years": "2022",
-    "role": "Research Fellow",
-    "place": "Surgical Research Institute",
-    "description": "Conducted prospective clinical research on post-operative complications and recovery trajectories. Contributed to two peer-reviewed publications and three conference abstracts."
+    "years": {
+      "en": "2016 –\n2020",
+      "az": "2016 –\n2020",
+      "de": "2016 –\n2020"
+    },
+    "role": {
+      "en": "Secondary Education",
+      "az": "Orta Təhsil",
+      "de": "Sekundarschulbildung"
+    },
+    "place": {
+      "en": "Dəyanət Türk Liseyi",
+      "az": "Dəyanət Türk Liseyi",
+      "de": "Dəyanət Türk Liseyi"
+    },
+    "description": {
+      "en": "Completed secondary education with an approximate 90/100 grade-point average before admission to medical school.",
+      "az": "Tibb fakültəsinə qəbuldan əvvəl təxminən 90/100 ortalama balla orta təhsilini tamamlayıb.",
+      "de": "Sekundarschulbildung mit einem Notendurchschnitt von etwa 90/100 vor der Zulassung zum Medizinstudium abgeschlossen."
+    }
   }
 ]

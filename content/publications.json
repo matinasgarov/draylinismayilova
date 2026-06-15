@@ -1,22 +1,27 @@
 [
   {
-    "year": "2024",
-    "title": "Minimally Invasive Techniques in Emergency Laparotomy: Outcomes and Considerations",
-    "journal": "Surgical Endoscopy · Peer-Reviewed"
-  },
-  {
-    "year": "2024",
-    "title": "Post-operative Pain Management Protocols in Elective Abdominal Surgery",
-    "journal": "BMC Surgery · Peer-Reviewed"
-  },
-  {
     "year": "2023",
-    "title": "Outcomes of Laparoscopic Cholecystectomy in Acute vs. Interval Cholecystitis",
-    "journal": "Journal of Surgical Research · Peer-Reviewed"
-  },
-  {
-    "year": "2023",
-    "title": "Surgical Education in the Era of Simulation: A Comparative Analysis",
-    "journal": "Journal of Surgical Education · Peer-Reviewed"
+    "title": {
+      "en": "Are medical students aware of SUDEP? A survey in Turkey",
+      "az": "Tibb tələbələri SUDEP barədə məlumatlıdırmı? Türkiyədə sorğu",
+      "de": "Sind Medizinstudierende sich SUDEP bewusst? Eine Umfrage in der Türkei"
+    },
+    "authors": {
+      "en": "Aslan FS, Ismayilova A, Hasanli S, Angelopoulou E, Baydili KN, Akyuz E",
+      "az": "Aslan F.S., İsmayılova A., Həsənli S., Angelopulu E., Baydili K.N., Akyüz E.",
+      "de": "Aslan FS, Ismayilova A, Hasanli S, Angelopoulou E, Baydili KN, Akyuz E"
+    },
+    "journal": {
+      "en": "medRxiv (preprint)",
+      "az": "medRxiv (çap öncəsi)",
+      "de": "medRxiv (Preprint)"
+    },
+    "doi": "10.1101/2023.07.14.23292665",
+    "summary": {
+      "en": "A cross-sectional survey assessing awareness of Sudden Unexpected Death in Epilepsy (SUDEP) among medical students in Turkey. The study found that awareness of SUDEP remained low among students, underscoring the need to strengthen epilepsy education within medical curricula so future clinicians can counsel patients on risk and prevention.",
+      "az": "Türkiyədə tibb tələbələri arasında Epilepsiyada Gözlənilməz Qəfil Ölüm (SUDEP) barədə məlumatlılığı qiymətləndirən kəsişmə tipli sorğu. Araşdırma göstərdi ki, tələbələr arasında SUDEP barədə məlumatlılıq aşağı səviyyədə qalır; bu da gələcək həkimlərin xəstələrə risk və profilaktika barədə məsləhət verə bilməsi üçün tibb tədris proqramlarında epilepsiya təhsilinin gücləndirilməsinin zəruriliyini vurğulayır.",
+      "de": "Eine Querschnittsstudie zur Bewertung des Bewusstseins für den plötzlichen unerwarteten Tod bei Epilepsie (SUDEP) unter Medizinstudierenden in der Türkei. Die Studie ergab, dass das Bewusstsein für SUDEP unter den Studierenden gering blieb, was die Notwendigkeit unterstreicht, die Epilepsie-Ausbildung in den medizinischen Lehrplänen zu stärken, damit künftige Ärztinnen und Ärzte Patienten zu Risiko und Prävention beraten können."
+    },
+    "url": "https://doi.org/10.1101/2023.07.14.23292665"
   }
 ]
