@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { Dictionary } from '@/app/[lang]/dictionaries'
 
 interface NavProps {
@@ -10,6 +10,7 @@ interface NavProps {
 
 export default function Nav({ dict, lang }: NavProps) {
   const navRef = useRef<HTMLElement>(null)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const nav = navRef.current
@@ -19,7 +20,27 @@ export default function Nav({ dict, lang }: NavProps) {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
+  // Lock body scroll while the mobile drawer is open
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
+
   const otherLangs = ['en', 'az', 'de'].filter((l) => l !== lang)
+  const operations = (dict.nav as { operations: string }).operations
+
+  const close = () => setOpen(false)
+
+  const links = [
+    { href: `/${lang}/#about`, label: dict.nav.about },
+    { href: `/${lang}/#experience`, label: dict.nav.experience },
+    { href: `/${lang}/#research`, label: dict.nav.research },
+    { href: `/${lang}/#blog`, label: dict.nav.journal },
+    { href: `/${lang}/#operations`, label: operations },
+    { href: `/${lang}/#contact`, label: dict.nav.contact },
+  ]
 
   return (
     <nav id="nav" ref={navRef}>
@@ -33,7 +54,7 @@ export default function Nav({ dict, lang }: NavProps) {
       </a>
       <ul className="nav-links nav-links-right">
         <li><a href={`/${lang}/#blog`}>{dict.nav.journal}</a></li>
-        <li><a href={`/${lang}/#operations`}>{(dict.nav as { operations: string }).operations}</a></li>
+        <li><a href={`/${lang}/#operations`}>{operations}</a></li>
         <li><a href={`/${lang}/#contact`}>{dict.nav.contact}</a></li>
         <li className="nav-lang-item">
           <div className="lang-switcher">
@@ -50,6 +71,41 @@ export default function Nav({ dict, lang }: NavProps) {
           </div>
         </li>
       </ul>
+
+      {/* Hamburger — visible on mobile only */}
+      <button
+        type="button"
+        className={`nav-hamburger${open ? ' is-open' : ''}`}
+        aria-label="Menu"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span /><span /><span />
+      </button>
+
+      {/* Mobile drawer */}
+      <div
+        className={`nav-mobile${open ? ' is-open' : ''}`}
+        onClick={close}
+      >
+        <ul className="nav-mobile-links" onClick={(e) => e.stopPropagation()}>
+          {links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={close}>{link.label}</a>
+            </li>
+          ))}
+          <li className="nav-mobile-langs">
+            <a href={`/${lang}/`} className="is-current" onClick={close}>
+              {lang.toUpperCase()}
+            </a>
+            {otherLangs.map((l) => (
+              <a key={l} href={`/${l}/`} onClick={close}>
+                {l.toUpperCase()}
+              </a>
+            ))}
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }
