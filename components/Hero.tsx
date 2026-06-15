@@ -69,8 +69,8 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           alt="Dr. Aylin Ismayilova, medical doctor"
           fetchPriority="high"
           decoding="async"
-          width="1600"
-          height="1066"
+          width="1066"
+          height="1600"
         />
       </div>
     </section>
