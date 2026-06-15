@@ -14,6 +14,23 @@
   status = 302
   force = true
 
+[[redirects]]
+  from = "/sitemap"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sitemap/"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=UTF-8"
+
 # Cache static images aggressively so repeat visits are instant.
 # (7 days — long enough to be fast, short enough that replacing an image
 # by the same filename still propagates within a week.)
