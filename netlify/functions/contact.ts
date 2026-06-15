@@ -37,22 +37,38 @@ export default async (req: Request): Promise<Response> => {
   const from = process.env.CONTACT_FROM_EMAIL ?? 'onboarding@resend.dev'
   const to = process.env.CONTACT_TO_EMAIL ?? 'matinasgarov21@gmail.com'
 
-  const { error } = await resend.emails.send({
-    from: `Aylin Ismayilova Website <${from}>`,
-    to,
-    replyTo: email,
-    subject: `New contact form message from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
-    html: `<h2>New contact form message</h2>
+  let result
+  try {
+    result = await resend.emails.send({
+      from: `Aylin Ismayilova Website <${from}>`,
+      to,
+      replyTo: email,
+      subject: `New contact form message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+      html: `<h2>New contact form message</h2>
 <p><strong>Name:</strong> ${escapeHtml(name)}</p>
 <p><strong>Email:</strong> ${escapeHtml(email)}</p>
 <p><strong>Message:</strong></p>
 <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>`,
-  })
+    })
+  } catch (e) {
+    // Network / SDK-level failure (e.g. bad API key shape, fetch error)
+    console.error('Resend threw:', e)
+    return json({ error: 'Failed to send message', detail: String(e) }, 502)
+  }
 
-  if (error) {
-    console.error('Resend error:', error)
-    return json({ error: 'Failed to send message' }, 502)
+  if (result.error) {
+    // Resend rejected the send — surface the real reason so it's debuggable.
+    // (Safe to expose: messages are things like "domain is not verified".)
+    console.error('Resend error:', result.error)
+    return json(
+      {
+        error: 'Failed to send message',
+        detail: result.error.message,
+        name: result.error.name,
+      },
+      502,
+    )
   }
 
   return json({ ok: true }, 200)
