@@ -660,10 +660,17 @@ footer {
 /* ── RESPONSIVE ──────────────────────────────────────── */
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; }
-  .hero-left { padding-top: calc(5rem + 5rem); justify-content: flex-start; }
-  .hero-right { height: 70vw; order: -1; }
-  .hero-right::after {
-    background: linear-gradient(to bottom, transparent 60%, var(--cream) 100%);
+  .hero-left { padding-top: 1.5rem; justify-content: flex-start; }
+  .hero-name { margin-top: 0; }
+  /* Show the full portrait, then dissolve its lower edge into the
+     marble bg.png behind the hero — no hard cut, no solid fill */
+  .hero-right { height: auto; order: -1; margin-top: -1px; }
+  .hero-right img {
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 74%, transparent 100%);
   }
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-photos { grid-template-columns: 1fr; }
@@ -741,9 +748,20 @@ footer {
 }
 .nav-hamburger span {
   display: block; height: 2px; width: 100%;
-  background: var(--dark);
+  /* Light bars with a soft dark halo stay visible over the photo while
+     the bar is transparent at the top of the page */
+  background: var(--cream);
+  box-shadow: 0 0 4px oklch(14% 0.01 48 / 0.55);
   border-radius: 1px;
-  transition: transform 0.3s ease, opacity 0.2s ease, background 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.2s ease, background 0.3s ease,
+              box-shadow 0.3s ease;
+}
+/* Once the bar is solid (or the drawer is open) the background is light —
+   switch the bars to dark */
+#nav.scrolled .nav-hamburger span,
+.nav-hamburger.is-open span {
+  background: var(--dark);
+  box-shadow: none;
 }
 /* Animate into an X when open */
 .nav-hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
