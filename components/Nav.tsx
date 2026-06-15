@@ -51,6 +51,7 @@ export default function Nav({ dict, lang }: NavProps) {
       </ul>
       <a href={`/${lang}/#home`} className="nav-logo">
         <img src="/images/logo.png" alt={dict.nav.logo} className="nav-logo-mark" />
+        <img src="/images/logo-mobile-view.png" alt={dict.nav.logo} className="nav-logo-mark-mobile" />
       </a>
       <ul className="nav-links nav-links-right">
         <li><a href={`/${lang}/#blog`}>{dict.nav.journal}</a></li>
