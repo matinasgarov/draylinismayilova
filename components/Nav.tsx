@@ -10,6 +10,7 @@ interface NavProps {
 
 export default function Nav({ dict, lang }: NavProps) {
   const navRef = useRef<HTMLElement>(null)
+  const scrollYRef = useRef(0)
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -20,11 +21,28 @@ export default function Nav({ dict, lang }: NavProps) {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
-  // Lock body scroll while the mobile drawer is open
+  // Lock body scroll while the mobile drawer is open. iOS ignores plain
+  // overflow:hidden in some in-app browsers, so freeze the body position too.
   useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : ''
+    if (!open) return
+
+    scrollYRef.current = window.scrollY
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${scrollYRef.current}px`
+    document.body.style.left = '0'
+    document.body.style.right = '0'
+    document.body.style.width = '100%'
+    document.body.style.overflow = 'hidden'
+
     return () => {
+      const scrollY = scrollYRef.current
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.width = ''
       document.body.style.overflow = ''
+      window.scrollTo(0, scrollY)
     }
   }, [open])
 
@@ -43,7 +61,7 @@ export default function Nav({ dict, lang }: NavProps) {
   ]
 
   return (
-    <nav id="nav" ref={navRef}>
+    <nav id="nav" ref={navRef} className={open ? 'is-menu-open' : undefined}>
       <ul className="nav-links nav-links-left">
         <li><a href={`/${lang}/#about`}>{dict.nav.about}</a></li>
         <li><a href={`/${lang}/#experience`}>{dict.nav.experience}</a></li>
@@ -77,7 +95,7 @@ export default function Nav({ dict, lang }: NavProps) {
       <button
         type="button"
         className={`nav-hamburger${open ? ' is-open' : ''}`}
-        aria-label="Menu"
+        aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
       >
